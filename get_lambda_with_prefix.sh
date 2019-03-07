@@ -4,7 +4,7 @@ download_code () {
 }
 
 mkdir -p lambda_functions
-for run in $(aws lambda list-functions --query 'Functions[?starts_with(FunctionName, `sambhaji_`) == `true`].FunctionName' --output text);
+for run in $(aws lambda list-functions --query 'Functions[?starts_with(FunctionName, `add prefix here`) == `true`].FunctionName' --output text);
 do
 	download_code "$run" &
 done
